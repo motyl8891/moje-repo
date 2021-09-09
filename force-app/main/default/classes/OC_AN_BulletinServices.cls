@@ -70,6 +70,12 @@ public with sharing class OC_AN_BulletinServices {
 		return responseValue;
 	}
 
+          /**************************************************************************************************
+	 * @Method Name : createAccessToken
+	 * @Description : Generates Access Token
+	 * @Param       : null
+	 * @Return      : String
+	 ****************************************************************************************************/
     public static void stopScheduledJobs(String bulletinId) {
         List<String> jobsToAbort = new List<String>();
         jobsToAbort.add('OC_AN_EX_DE' + bulletinId);
