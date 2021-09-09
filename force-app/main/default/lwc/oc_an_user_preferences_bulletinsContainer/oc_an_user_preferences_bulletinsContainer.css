@@ -1,0 +1,15 @@
+.row .rowheading{
+    font-size: 14px!important;
+    font-family: "Ericsson Hilda Bold",Helvetica,Arial,sans-serif!important;
+    color: #242424!important;
+}
+
+.row .rowcontent{
+    font-size: 14px!important;
+    font-family: "Ericsson Hilda Regular",Helvetica,Arial,sans-serif!important;
+    color: #242424!important;
+}
+
+.row{
+    padding: 8px;
+}

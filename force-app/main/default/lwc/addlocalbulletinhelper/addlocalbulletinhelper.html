@@ -1,0 +1,13 @@
+<template>
+<template if:true={status}>
+    <lightning-combobox name="status" label="status" value={value}
+    options={status} onchange={handleChange}>
+</lightning-combobox>            
+</template>
+
+<template if:true={sub_status}>
+<lightning-combobox name="sub status" label="sub status" value={value}
+options={sub_status} onchange={handleChange}>
+</lightning-combobox>            
+</template>
+</template>

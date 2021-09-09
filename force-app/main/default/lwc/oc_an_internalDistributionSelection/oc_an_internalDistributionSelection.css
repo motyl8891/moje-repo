@@ -1,0 +1,12 @@
+.slds-modal__container {
+  height: auto;
+  width: 100%;
+  max-width: 90vh;
+}
+.modal-body {
+  height: 40vh !important;
+  max-height: 40vh !important;
+}
+.slds-modal__footer {
+  display: inline !important;
+}

@@ -1,0 +1,45 @@
+<template>
+    
+
+    <div class="slds-grid row slds-var-p-bottom_medium">
+        <div class="slds-col slds-var-m-right_small">
+            <lightning-input onchange={onchange} type="toggle" name="input1" label="" variant="label-hidden"></lightning-input>
+            <!--<c-omnichanneltheme-element-toggle type="toggle" name="input1" onchange={onchange}></c-omnichanneltheme-element-toggle>-->
+        </div>
+        <div class="slds-col slds-size_3-of-12 rowheading">Email notifications enabled</div>
+        <template if:false={checked}>
+            <div class="slds-col slds-size_9-of-12">
+                <lightning-icon icon-name="utility:warning" alternative-text="Warning!" title="Warning" size="xx-small"></lightning-icon>
+                <span class="slds-var-m-left_xx-small">You will not receive notifications of any kind unless you enable email notifications.</span>
+            </div>
+        </template>
+    </div>
+    <!--<template if:true={checked}>-->
+    <div>
+        <span class="rowheading">Email me when</span>
+        <lightning-layout multiplerows="true" class="slds-var-p-top_medium">
+            <lightning-layout-item size="4"><lightning-input type="checkbox" label="Endorses me on a topic" name="input1"></lightning-input></lightning-layout-item>
+            <lightning-layout-item size="4"><lightning-input type="checkbox" label="Comments on an item I like" name="input1"></lightning-input></lightning-layout-item>
+            <lightning-layout-item size="4"><lightning-input type="checkbox" label="Likes or upvotes my post or comment" name="input1"></lightning-input></lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout multiplerows="true">
+            <lightning-layout-item size="4"><lightning-input type="checkbox" label="Follows me" name="input1"></lightning-input></lightning-layout-item>
+            <lightning-layout-item size="4"><lightning-input type="checkbox" label="Mentions me in a comment" name="input1"></lightning-input></lightning-layout-item>
+            <lightning-layout-item size="4"><lightning-input type="checkbox" label="Comments on a post on my profile" name="input1"></lightning-input></lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout multiplerows="true">
+            <lightning-layout-item size="4"><lightning-input type="checkbox" label="Comments on my posts" name="input1"></lightning-input></lightning-layout-item>
+            <lightning-layout-item size="4"><lightning-input type="checkbox" label="Requires approval on a feed item" name="input1"></lightning-input></lightning-layout-item>
+            <lightning-layout-item size="4"><lightning-input type="checkbox" label="Comments on an item I bookmarked" name="input1"></lightning-input></lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout multiplerows="true">
+            <lightning-layout-item size="4"><lightning-input type="checkbox" label="Comments after me" name="input1"></lightning-input></lightning-layout-item>
+            <lightning-layout-item size="4"><lightning-input type="checkbox" label="Posts on my profile" name="input1"></lightning-input></lightning-layout-item>
+            <lightning-layout-item size="4"><lightning-input type="checkbox" label="Mentions me in a post" name="input1"></lightning-input></lightning-layout-item>
+        </lightning-layout>
+        <lightning-layout multiplerows="true">
+            <lightning-layout-item size="4"><lightning-input type="checkbox" label="Selects my answer as best" name="input1"></lightning-input></lightning-layout-item>
+        </lightning-layout>
+    </div>
+<!--</template>-->
+</template>

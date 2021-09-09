@@ -1,0 +1,74 @@
+<template>
+<lightning-card class="">
+    <!--Loading Spinner-->
+    <div class="spinner">
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+            </lightning-spinner>
+        </template>
+    </div>       
+</lightning-card> 
+<template if:true={noModalBody}>
+<c-oc_an_modal  modal-title="Local Bulletin Account Selection" display-body="true" display-footer="false"
+footer-button-one-label={label.oc_create_local_bulletin} footer-button-two-label={label.oc_an_cancel_button} footer-button-one-variant="brand"
+onhandlebuttonone={handleClick} onhandlebuttontwo={handleCancel}> 
+<div slot="modalBody">          
+        <table class="slds-table slds-table_bordered" id="tableID">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="slds-size_1-of-6" scope="col">
+                        <div class="slds-truncate" title="checkBox">Select</div>
+                    </th>
+                    <th class="slds-size_1-of-6" scope="col">
+                        <div class="slds-truncate" title="accountName">Name</div>
+                    </th>
+                    <th class="slds-size_3-of-6" scope="col">                         
+                        <div class="slds-truncate" title="accountStatus"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Status  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                            &nbsp; SubStatus</div>
+                    </th>              
+                    <th class="slds-size_1-of-6" scope="col">
+                        <div class="slds-truncate" title="accountComment">Comment</div>
+                    </th>
+                </tr>
+            </thead>
+    <tbody>
+        <template if:true={areDetailsVisible}>
+            <template for:each={localBulletinList} for:item="acc" for:index="index">
+                <tr class="slds-hint-parent" key={acc.Id}>
+                        <td>                            
+                            <div>
+                                <lightning-input type="checkbox" onchange={handleCheckBoxChange} checked={showBoolean} disabled={test}
+                                    data-id={acc.Id}></lightning-input>
+                            </div>                          
+                        </td>                                    
+                        <td>
+                            <div class="slds-truncate">
+                                <lightning-formatted-text data-id={acc.Id} value={acc.OC_AN_Account__r.Name}> </lightning-formatted-text>
+                            </div>
+                        </td>
+                        <td>                          
+                            <c-oc_an_localbulletindependentpicklist acc={acc} status={StatusPicklistValues}
+                                key={acc.id} onvaluechange={handleChildEvent} onvaluechanges={handleChildEventSubStatus}>
+                            </c-oc_an_localbulletindependentpicklist>                           
+                        </td>
+                        <td>
+                            <div class="row">
+                                <lightning-input rows="1" wrap="off" onchange={handleTextBoxChange} name="comment" data-id={acc.Id}
+                                    value={acc.OC_AN_Comments__c} maxlength="300"></lightning-input>
+                                </div>
+                                </td>
+                                </tr>
+                                </template>
+                                </template>                                                              
+                                </tbody> 
+                                </table>                                                                  
+                                </div>          
+                        </c-oc_an_modal>
+                        </template>
+                        <lightning-card>
+                            <template if:true={noBody}>
+                                <div class="slds-truncate">                          
+                                </div>
+                            </template>
+                        </lightning-card>       
+</template>

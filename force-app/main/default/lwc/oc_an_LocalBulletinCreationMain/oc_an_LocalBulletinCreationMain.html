@@ -1,0 +1,69 @@
+<template>
+    <lightning-card class="">
+        <!--Loading Spinner-->
+        <!--div class="spinner" -->
+            <template if:true={isLoading}>
+                <lightning-spinner class="slds-align_absolute-center" size="medium" alternative-text="Loading..." variant="brand">
+                </lightning-spinner>
+            </template>
+        <!--/div -->       
+    </lightning-card>   
+    <template if:true={noModalBody}>
+    <c-oc_an_modal  modal-title="Local Version Account Selection" display-body="true" display-footer="false"
+    footer-button-one-label={label.oc_create_local_bulletin} footer-button-two-label={label.oc_an_cancel_button} footer-button-one-variant="brand"
+    onhandlebuttonone={handleClick} onhandlebuttontwo={handleCancel}> 
+    <div slot="modalBody">          
+            <table class="slds-table slds-table_bordered" id="tableID">
+                <thead>
+                    <tr class="slds-line-height_reset slds-grid">
+                        <th class="slds-size_1-of-3" scope="col">
+                            <div class="slds-truncate" title="accountName">Name</div>
+                        </th>
+                        <th class="slds-size_1-of-3" scope="col">                         
+                            <div class="slds-truncate" title="accountStatus"> Status </div>
+                        </th>              
+                        <th class="slds-size_1-of-3" scope="col">
+                            <div class="slds-truncate" title="accountComment">Comment</div>
+                        </th>
+                    </tr>
+                </thead>
+        <tbody>
+            <template if:true={areDetailsVisible}>
+                <template for:each={localBulletinList} for:item="acc" for:index="index">
+                    <tr class="slds-hint-parent slds-grid" key={acc.Id}>                                  
+                            <td class="slds-size_1-of-3">
+                                <div class="slds-truncate slds-p-top_large" title={acc.OC_AN_Account__r.Name}>
+                                    <lightning-formatted-text data-id={acc.Id} value={acc.OC_AN_Account__r.Name}> </lightning-formatted-text>
+                                </div>
+                            </td>
+                            <td class="slds-size_1-of-3">                          
+                                <lightning-combobox
+                                name="status"
+                                value={acc.OC_AN_Status__c}
+                                options={StatusPicklistValues}
+                                data-id={acc.Id}
+                                dropdown-alignment="auto"
+                                onchange={handleChange} ></lightning-combobox>                          
+                            </td>
+                            <td class="slds-size_1-of-3">
+                                <div class="row">
+                                    <lightning-input rows="1" wrap="off" onchange={handleTextBoxChange} name="comment" data-id={acc.Id}
+                                        value={acc.OC_AN_Comments__c} maxlength="300"></lightning-input>
+                                    </div>
+                                    </td>
+                                    </tr>
+                                    </template>
+                                    </template>                                                              
+                                    </tbody> 
+                                    </table>                                                                  
+                                    </div>          
+                            </c-oc_an_modal>
+                            </template>
+                            <lightning-card>
+                                <template if:true={noBody}>
+                                    <div class="slds-truncate">                          
+                                    </div>
+                                </template>
+                            </lightning-card>
+                            
+    </template>

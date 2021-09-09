@@ -1,0 +1,124 @@
+/* Class Name : OC_TR_Constants
+* Description :  Omni Channel Time Reporting Constant class.
+*/ 
+
+public Without Sharing class  OC_TR_Constants {
+    
+    public static void testConstants(){   
+        System.assertNotEquals(null, NewFeedComment);
+        System.assertNotEquals(null, EditFeedComment);
+        System.assertNotEquals(null, FeedComment);
+        System.assertNotEquals(null, FeedRevision);
+        System.assertNotEquals(null, NetworkActivityAudit);
+        System.assertNotEquals(null, Forum);
+        System.assertNotEquals(null, Chat);
+        System.assertNotEquals(null, Active);
+        System.assertNotEquals(null, Submitted);
+        System.assertNotEquals(null, NotSubmitted);
+        System.assertNotEquals(null, OC_TR_ACTIVITIESPROCESSOR);
+        System.assertNotEquals(null, PROCESSACTIVITYRECORDS);
+        System.assertNotEquals(null, OC_TR_GENERATETIMERECORDCONTROLLER);
+        System.assertNotEquals(null, VERIFYLOGGEDINUSEREMPLOYEEDETAILS);
+        System.assertNotEquals(null, OC_TR_VALIDATIONSUTILITY);
+        System.assertNotEquals(null, VALIDATEAGENTTIMESPENTONTIMERECORD);
+        System.assertNotEquals(null, OC_TR_QUEUEQUICKACTIONCONTROLLER);
+        System.assertNotEquals(null, UPDATEQUEUENAMEONTIMERECORD);
+        System.assertNotEquals(null, FETCHQUEUERECORDS);
+        System.assertNotEquals(null, OC_TR_UTILITY);
+        System.assertNotEquals(null, GENERATESOQL);
+        System.assertNotEquals(null, COSTALLOCATIONPREFIX);
+        System.assertNotEquals(null, DEFAULTCOSTALLOCATION);
+        System.assertNotEquals(null, SEARCHMETADATAUSINGLIKE);
+        System.assertNotEquals(null, toastTypeInformational);
+        System.assertNotEquals(null, toastTypeSuccess);
+        System.assertNotEquals(null, toastTypeError);
+        System.assertNotEquals(null, toastTypeWarning);
+        System.assertNotEquals(null, toastMsgTRDeleteError);
+        System.assertNotEquals(null, ApexCls_OC_TR_DeleteTimeRecordController);
+        System.assertNotEquals(null, ApexMethod_updateTimeRecordAsInactive);
+        System.assertNotEquals(null, deleteTimeRecord);
+        System.assertNotEquals(null, emailTemp_GenerateTimeRecords);
+        System.assertNotEquals(null, profile_ServiceUser);
+        System.assertNotEquals(null, OC_TR_BATCH_DeleteInactiveTimeRecords);
+        System.assertNotEquals(null, execute);
+        System.assertNotEquals(null, OC_TR_EmailReminder_From_EmailAddress);
+        System.assertNotEquals(null, CustomerCommunityId);
+        System.assertNotEquals(null, queue);
+        System.assertNotEquals(null, Method_FetchActivityOptions);
+        System.assertNotEquals(null, Method_ValidateTimeRecordGeneration);
+        System.assertNotEquals(null, Method_UpsertTimeRecords);
+        System.assertNotEquals(null, ApexCls_TimeRecordTriggerHelper);
+        System.assertNotEquals(null, method_populateSearchFieldsOnTimeRecord);
+        System.assertNotEquals(null, method_populateDescriptionFieldOnTimeRecord);
+        System.assertNotEquals(null, ApexCls_OC_TR_FetchTimeRecord);
+        System.assertNotEquals(null, method_fetchTimeRecord);
+        System.assertNotEquals(null, method_GenerateDateInYYYMMDDFormat);
+        System.assertNotEquals(null, ApexCls_OC_TR_HelperUtil);
+        System.assertNotEquals(null, method_CheckIfTimeRecordsAreCreatedByEngineers);
+        System.assertNotEquals(null, method_SendEmailToUsers);
+        System.assertNotEquals(null, durationToDeleteTimeRecords);
+        System.assertNotEquals(null, durationToTREmailReminders);
+     } 
+    public static final String NewFeedComment = 'NewFeedComment';
+    public static final String EditFeedComment = 'EditFeedComment';
+    public static final String FeedComment = 'FeedComment';
+    public static final String FeedRevision = 'FeedRevision';
+    public static final String NetworkActivityAudit = 'NetworkActivityAudit';
+    public static final String Forum = 'Forum';
+    public static final String Chat = 'Chat';
+    public static final String Active = 'Active';
+    public static final String Submitted = 'Submitted';
+    public static final String NotSubmitted = 'Not Submitted';
+    public static final String OC_TR_ACTIVITIESPROCESSOR = 'OC_TR_ActivitiesProcessor';
+    public static final String PROCESSACTIVITYRECORDS = 'processActivityRecords';
+    public static final String OC_TR_GENERATETIMERECORDCONTROLLER = 'OC_TR_GenerateTimeRecordController';
+    public static final String VERIFYLOGGEDINUSEREMPLOYEEDETAILS = 'verifyLoggedInUserEmployeeDetails';
+    public static final String OC_TR_VALIDATIONSUTILITY = 'OC_TR_ValidationsUtility';
+    public static final String VALIDATEAGENTTIMESPENTONTIMERECORD ='ValidateAgentTimeSpentOnTimeRecord';
+    public static final String OC_TR_QUEUEQUICKACTIONCONTROLLER = 'OC_TR_QueueQuickActionController';
+    public static final String UPDATEQUEUENAMEONTIMERECORD ='updateQueueNameOnTimeRecord';
+    public static final String FETCHQUEUERECORDS = 'fetchQueuerecords';
+    public static final String OC_TR_UTILITY = 'OC_TR_Utility';
+    public static final String GENERATESOQL = 'generateSOQL';
+    public static final	String COSTALLOCATIONPREFIX = 'Cost_Allocation_';
+    public static final String DEFAULTCOSTALLOCATION = 'Cost_Allocation_Default';
+    public static final String SEARCHMETADATAUSINGLIKE = '%Cost_Allocation%';
+    public static final String toastTypeInformational = 'INFORMATIONAL';
+    public static final String toastTypeSuccess = 'Success';
+    public static final String toastTypeError = 'Error';
+    public static final String toastTypeWarning = 'Warning';
+    public static final String toastMsgTRDeleteError = 'Deletion of time record is failed!Please contact your system administrator';
+    public static final String ApexCls_OC_TR_DeleteTimeRecordController = 'OC_TR_DeleteTimeRecordController';
+    public static final String ApexMethod_updateTimeRecordAsInactive = 'updateTimeRecordAsInactive';
+    public static final String deleteTimeRecord = 'Delete TimeRecord';
+    public static final String emailTemp_GenerateTimeRecords = 'OC_TR_Template_Generate_Time_Records';
+    public static final String profile_ServiceUser = 'Ericsson Service';
+    public static final String OC_TR_BATCH_DeleteInactiveTimeRecords = 'OC_TR_BATCH_DeleteInactiveTimeRecords';
+    public static final String execute = 'execute';
+    public static final String OC_TR_EmailReminder_From_EmailAddress = 'OC_TR_EmailReminder_From_EmailAddress';
+    public static final String CustomerCommunityId = 'CustomerCommunityId';
+    public static final String queue = 'Queue';
+    public static final String Method_FetchActivityOptions = 'fetchActivityOptions';
+    public static final String Method_ValidateTimeRecordGeneration = 'validateTimeRecordGeneration';
+    public static final String Method_UpsertTimeRecords = 'upsertTimeRecords';
+    public static final String ApexCls_TimeRecordTriggerHelper = 'OC_TR_TimeRecordTriggerHelper';
+    public static final String method_populateSearchFieldsOnTimeRecord = 'populateSearchFieldsOnTimeRecord';
+    public static final String method_populateDescriptionFieldOnTimeRecord = 'populateDescriptionFieldOnTimeRecord';
+    public static final String ApexCls_OC_TR_FetchTimeRecord = 'OC_TR_FetchTimeRecord';
+    public static final String method_fetchTimeRecord = 'fetchTimeRecord';
+    public static final String method_GenerateDateInYYYMMDDFormat = 'GenerateDateInYYYMMDDFormat';
+    public static final String ApexCls_OC_TR_HelperUtil = 'OC_TR_HelperUtil';
+    public static final String method_CheckIfTimeRecordsAreCreatedByEngineers = 'CheckIfTimeRecordsAreCreatedByEngineers';
+    public static final String method_SendEmailToUsers = 'SendEmailToUsers';
+    public static final String durationToDeleteTimeRecords = 'OC_TR_Duration_DeleteInactiveTimeRecords';
+    public static final String durationToTREmailReminders = 'OC_TR_Duration_For_TR_Email_Reminders';
+    public static final String method_SetCustomerCompCode = 'SetCustomerCompCode';
+    public static final String ps_CommunityModerator = 'Ericsson_Service_Community_Moderator';
+    //Added for U-2886:Start
+    public static final String otherActivity = 'otherActivity';
+    public static final String AllActivity = 'AllActivity';
+    public static final String errorMessage = 'USERNAME and OWNER NAME IS NOT EQUAL';
+    public static final String LiveChatTranscript = 'LiveChatTranscript'; 
+    public static final String unauthorizedUser = 'UnauthorizedUser';
+    //Added for U-2886:End
+}

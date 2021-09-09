@@ -1,0 +1,30 @@
+<template>
+    <div>
+       <lightning-button-icon
+           icon-name="utility:back"
+           variant="bare"
+           onclick={handlePrevious}
+           class="slds-float_left"
+           size="medium"
+           alternative-text="Previous"
+           disabled={disablePreviousButton}
+       >
+       </lightning-button-icon>
+       <span class="slds-float_left">
+           <template if:true={pageNumbersList}>
+              <template for:each={pageNumbersList} for:item="pageNum" >
+               &nbsp; <li  key={pageNum.name} data-value={pageNum.name} class={pageNum.style}  onclick={handlePagination} >{pageNum.name}</li>  &nbsp; 
+               </template>
+           </template>
+       </span>
+       <lightning-button-icon
+           icon-name="utility:forward"
+           variant="bare"
+           onclick={handleNext}
+           class="slds-float_left"
+           size="medium"
+           alternative-text="Next"
+           disabled={disableNextButton}>
+   </lightning-button-icon>
+   </div>
+   </template>

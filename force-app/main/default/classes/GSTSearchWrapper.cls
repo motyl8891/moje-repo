@@ -1,0 +1,24 @@
+global class GSTSearchWrapper implements Comparable {
+	public GstCustomSearch__c searchObj;
+	// Constructor
+	public GSTSearchWrapper(GstCustomSearch__c srch) {
+		searchObj = srch;
+	}
+
+	// Compare opportunities based on the opportunity amount.
+	global Integer compareTo(Object compareTo) {
+		// Cast argument to OpportunityWrapper
+		GSTSearchWrapper compareToSearch = (GSTSearchWrapper) compareTo;
+		// The return value of 0 indicates that both elements are equal.
+		Integer returnValue = 0;
+		if (searchObj.CreatedDate > compareToSearch.searchObj.CreatedDate) {
+			// Set return value to a positive value.
+			returnValue = 1;
+		} else if (searchObj.CreatedDate < compareToSearch.searchObj.CreatedDate) {
+			// Set return value to a negative value.
+			returnValue = -1;
+		}
+
+		return returnValue;
+	}
+}

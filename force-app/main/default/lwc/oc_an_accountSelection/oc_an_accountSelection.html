@@ -1,0 +1,27 @@
+<template>
+
+    <c-oc_an_modal modal-title="Bulletin Account Selection" display-body="true" display-footer="true"
+        footer-button-one-label={label.oc_add_account_button} footer-button-two-label={label.oc_an_cancel_button} footer-button-one-variant="success"
+        onhandlebuttonone={handleAddAccount}>
+        <div slot="modalBody">
+            <lightning-card>
+                <c-oc_custom-search-component slot="actions" onhandlesearch={searchDataTable}>
+                </c-oc_custom-search-component>
+                <div class="slds-m-around_medium slds-scrollable--y" style="height:13rem">
+                    <lightning-datatable data-id="datarow" key-field="Id" data={accountDataWithPagination}
+                        columns={accountColoumns} onrowselection={getSelectedAccountIds}
+                        selected-rows={preSelectedRows}>
+                    </lightning-datatable>
+                </div>
+            </lightning-card>
+        </div>
+        <template if:true={isDataRetrieved}>
+            <div slot="modalFooter">
+                <c-oc_an_pagination num-of-total-records={numberOfAccounts} num-of-records-per-page="10"
+                    onpaginate={handlePagination}>
+                </c-oc_an_pagination>
+            </div>
+        </template>
+    </c-oc_an_modal>
+
+</template>

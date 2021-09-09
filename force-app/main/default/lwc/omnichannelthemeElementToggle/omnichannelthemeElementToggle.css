@@ -1,0 +1,52 @@
+.toggle {
+    width: 30px;
+    height: 17px;
+    background-color: #FFF;
+    border: solid 1px #c8c8c8;
+    border-radius: 34px;
+    transition: background-color 0.4s, transform 0.4s;
+}
+
+.toggle::before{
+    position: absolute;
+    content: "";
+    height: 11px;
+    width: 11px;
+    background-color: #242424;
+    border-radius: 50%;
+    transition: background-color 0.4s, transform 0.4s;
+    margin: 2px;
+}
+
+.toggle:not(.disabled) {
+    cursor: pointer;
+}
+
+.toggle:not(.disabled):hover {
+    border: solid 1px #1174E6;
+}
+
+.toggle.checked {
+    background-color: #1174E6;
+    border-color: #1174E6;
+}
+
+.toggle.checked::before{
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+    background-color: #FFF;
+}
+
+.toggle.checked.disabled{
+    border-color: #ebebeb;
+}
+
+.toggle.disabled{
+    background-color: #ebebeb;
+    border-color: #c8c8c8;
+}
+
+.toggle.disabled::before {
+    background-color: #878787;
+}

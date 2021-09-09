@@ -1,0 +1,45 @@
+.pref-link, .pref-link button{
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-position: under;  
+    text-align: left; 
+    float:left;
+    margin-bottom: .8em;
+    background:none;
+    padding:0px;
+}
+
+table, th, tr,td{
+    border: none !important;
+}
+
+.slds-tabs_default{
+    font-size:0.7em !important;
+}
+
+.slds-modal__container{
+    min-height: 80%;
+    color: #000;
+    min-width: 80% !important;
+}
+.slds-modal__content{
+    overflow: hidden;
+}
+.tabset{
+    height: calc(100% - 0px);
+    display: flex;
+}
+
+.slds-tabs_default__content{
+    height: calc(100% - 56px);
+    padding: 0px;
+    margin: 16px 0;
+}
+
+.lgc-bg {
+    background-color: rgb(242, 242, 242);
+}
+
+.lgc-bg-inverse {
+    background-color: rgb(22, 50, 92);
+}

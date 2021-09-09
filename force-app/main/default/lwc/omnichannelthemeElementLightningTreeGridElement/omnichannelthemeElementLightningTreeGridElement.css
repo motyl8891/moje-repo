@@ -1,0 +1,83 @@
+th, td{
+    height: 33px;
+}
+
+th:not(.checkboxRow), td:not(.checkboxRow){
+    padding: 8px;
+    width: 100%;
+}
+
+tr:hover th, tr:hover td{
+    background-color: #dcdcdc !important;
+    box-shadow: unset !important;
+}
+
+.collapsed{
+    display: none;
+}
+
+.expanded{
+    display: contents;
+}
+
+.checkboxRow{
+    width: 30px !important;
+    padding: 8px;
+}
+
+.chevronButton{
+    border: none;
+    padding: 0;
+    width: 40px;
+    background: transparent;
+    vertical-align: middle;
+}
+
+.chevronButton:hover, .chevronButton:focus{
+    border: none;
+    outline: none;
+}
+
+.noButtonSpace{
+    width: 40px;
+    display: inline-block;
+}
+.level1{
+    padding-left: 8px !important;
+    display: inline-block;
+}
+
+.level2{
+    padding-left:34px !important;
+    display: inline-block;
+}
+
+.level3{
+    padding-left:71px !important;
+    display: inline-block;
+}
+
+.level4{
+    padding-left:98px !important;
+    display: inline-block;
+}
+
+.level5{
+    padding-left:125px !important;
+    display: inline-block;
+}
+
+.level6{
+    padding-left:152px !important;
+    display: inline-block;
+}
+
+.level7{
+    padding-left:179px !important;
+    display: inline-block;
+}
+
+.level8{
+    padding-left:206px !important;
+    display: inline-block;
+}

@@ -1,0 +1,51 @@
+<template>
+    
+    <div class="slds-is-relative">
+    <template if:true={displaySpinner}>
+        <lightning-spinner class="slds-align_absolute-center" size="medium" alternative-text="Loading..." variant="brand">
+    </lightning-spinner>
+     </template> 
+    <c-oc_an_modal
+        modal-title="Bulletin Product Selection"
+        display-body="true"
+        display-footer="true"
+        footer-button-one-label="Add Products"
+        footer-button-two-label="Cancel"
+        footer-button-one-variant="success"
+        onhandlebuttonone={handleAddProducts}
+        >
+            <div slot="modalBody" >
+               <div class="slds-p-around_medium fontStyle slds-scrollable--y" style="height:26rem" >
+                <!--<lightning-tree-grid
+                    data-id="datarow"
+                    columns={productGridColumns}
+                    data={gridData}
+                    expanded-rows={gridExpandedRows}
+                    key-field="recordId"
+                    is-loading={gridLoadingState}
+                    onrowselection={updateSelectedRows}
+                    selected-rows={selectedRows}
+                    ontoggle={handleToggle}
+                >
+            </lightning-tree-grid>-->
+            <c-oc_an_product-selection-tree-grid  grid-data={gridData} grid-column={gridColumns} 
+                    onscroll={handleScroll} search-field-name="Name" 
+                    search-input-required=true placeholder-text="Search Product...">
+            </c-oc_an_product-selection-tree-grid>
+       
+                 </div>
+            </div>
+            <template if:true={isDataRetrieved}>
+            <div slot="modalFooter">
+                <!--<c-oc_an_pagination 
+                    num-of-total-records = {numberOfProducts}
+                    num-of-records-per-page = {numberOfRecPerPage}
+                    onpaginate={handlePagination}
+                >
+                </c-oc_an_pagination>-->
+            </div>
+        </template>
+    </c-oc_an_modal>
+    
+</div>
+</template>

@@ -1,0 +1,29 @@
+<template>
+    <!--<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">;
+        <use xlink:href={iconsURL}></use>
+    </svg>-->
+    <template if:true={searchInputRequired}>
+        <lightning-input class="searchinput" label=" " value={searchText} variant="label-hidden" placeholder={placeholderText} onchange={handleFilter}></lightning-input>
+        <!--<span class="icon icon-search searchicon"></span>-->
+    </template>
+   <div class="slds-table_header-fixed_container slds-scrollable_x">
+        <div class="slds-scrollable_y" style="width: calc(100% - 0px);" onscroll={handleScroll}>
+            <table class="slds-table slds-table_bordered">
+                <thead>
+                    
+                    <th class="checkboxRow"><c-omnichanneltheme-element-checkbox selected-state={selectedStateTreeGrid} onchange={handleCompleteTreeSelection}></c-omnichanneltheme-element-checkbox></th>
+                    <template for:each={gridColumn} for:item="column">
+                        <th key={column.fieldName}>{column.label}</th>
+                    </template>
+                </thead>
+                <tbody>
+                    <template for:each={tableData} for:item="row">
+                        <template if:true={row.filtered}>
+                            <c-omnichanneltheme-element-lightning-tree-grid-element key={row.Id} row-data={row} grid-column={gridColumn} level="0" style="display: contents;" onrowselect={handleRowSelection} ></c-omnichanneltheme-element-lightning-tree-grid-element>
+                        </template>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,45 @@
+<template>
+      
+    <template if:true={showHeader}>
+            <header class="slds-modal__header">
+                    <h1 id="modal-heading" class="slds-modal__title slds-hyphenate">
+                            {modalTitle}
+                    </h1>
+            </header>
+    </template>
+   
+    <template if:true={showBody}>
+          <div class="slds-modal__content slds-p-around_large" id="modal-content">
+                    <slot name="modalBody"></slot>
+            </div>
+                
+    </template>
+    <template if:true={showFooter}>
+          <footer class="slds-modal__footer">  
+                  <slot name="modalFooter"></slot>
+                  <template if:true={isButtonOneReq}>
+                          <lightning-button class="" 
+                          variant={buttonOneVariant} 
+                          label={footerButtonOneLabel} 
+                          onclick={handleButtonOne} >
+                          </lightning-button> 
+                    </template>
+                   <template if:true={isButtonTwoReq}>
+                          <lightning-button class="slds-m-left_small" 
+                          variant={buttonTwoVariant} 
+                          label={footerButtonTwoLabel} 
+                          onclick={handleButtonTwo} >
+                          </lightning-button>   
+                   </template>
+                   <template if:true={isButtonThreeReq}>
+                        <lightning-button class="slds-m-left_small" 
+                        variant={buttonThreeVariant} 
+                        label={footerButtonThreeLabel} 
+                        onclick={handleThirdButton} >
+                        </lightning-button>   
+                 </template>
+           </footer>    
+    </template> 
+
+  
+    </template>

@@ -1,0 +1,29 @@
+<template>
+    <template if:true={records}>
+		<template if:true={status}>
+			<template if:true={sub_status}>
+				<table>
+					<template for:each={records} for:item="row">
+						<tr key={row.Id}>
+                            <td>
+                                <lightning-input 
+                                class="slds-p-right_xx-large" 
+                                type="checkbox"
+                                label="checkbox Select All"
+                                onchange={handleCheckBoxClick}
+                                data-target-id={row.Id}
+                                ></lightning-input>
+
+                            </td>
+							<td>{row.Id}</td> 
+							<td>{row.OC_AN_Status__c}</td>
+							<td>
+                                <c-addlocalbulletinhelper key={row.Id} substatusdep={substatusdep} status={status}> </c-addlocalbulletinhelper>
+                            </td>
+						</tr>
+					</template>
+				</table>
+			</template>
+		</template>
+	</template>
+</template>

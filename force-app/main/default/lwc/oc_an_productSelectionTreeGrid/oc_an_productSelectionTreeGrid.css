@@ -1,0 +1,86 @@
+.slds-table{
+    border-top: 0;
+    background-color: transparent;
+}
+
+.slds-table th, .slds-table td{
+    height: 33px;
+}
+
+.slds-table tbody tr:hover th, .slds-table tbody tr:hover td{
+    background: #dcdcdc;
+    box-shadow: unset;
+}
+
+.slds-table tbody tr:first-child th, .slds-table tbody tr:first-child td{
+    border-top: none;
+}
+
+.slds-table thead th:not(.checkboxRow), .slds-table thead td:not(.checkboxRow), .slds-table th:not(.checkboxRow), .slds-table td:not(.checkboxRow){
+    padding: 8px;
+    width: 100%;
+}
+
+.slds-table thead th, .slds-table thead td{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #b0b0b0;
+}
+
+.slds-table--header-fixed_container, .slds-table_header-fixed_container{
+    padding-top: unset;
+    height: calc(100% - 41px);
+    background-color: transparent;
+}
+
+.slds-table--header-fixed_container::before, .slds-table_header-fixed_container::before{
+    border-bottom: none;
+}
+
+.checkboxRow{
+    width: 30px !important;
+    padding: 8px;
+}
+
+.searchinput{
+    padding: 0 0 8px 0;
+    border: 0px;
+    min-width: 100%;
+    background: transparent;
+    background-color: transparent;
+    color: #242424;
+    font-size: 12px;
+    font-family: "Ericsson Hilda Regular", Helvetica, Arial, sans-serif;
+    display: inline-flex;
+    align-items: center;
+}
+
+.searchinput label{
+    display: none;
+}
+
+.searchinput .slds-input{
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+}
+.searchinput .slds-input::placeholder{
+    color: #242424;
+    opacity: 0.6;
+}
+
+.searchinput .slds-input:focus{
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.searchicon{
+    cursor: pointer;
+    font-size: 12px;
+    opacity: 0.6;
+}

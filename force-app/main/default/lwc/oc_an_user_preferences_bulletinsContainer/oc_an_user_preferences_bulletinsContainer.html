@@ -1,0 +1,16 @@
+<template>
+    
+    <div class="slds-grid row">
+        <div class="slds-col slds-size_3-of-7 rowheading">Bulletin Types</div>
+        <div class="slds-col slds-size_2-of-7 rowheading">Email</div>
+        <div class="slds-col slds-size_2-of-7 rowheading">Notification Panel</div>
+    </div>
+
+    <template for:each={local_bulletinSettings} for:item="row">
+        <div key={row.value} class="slds-grid row">
+            <div class="slds-col slds-size_3-of-7 rowcontent">{row.label}</div>
+            <div class="slds-col slds-size_2-of-7"><c-omnichanneltheme-element-toggle type="email" keyid={row.value} checked={row.email} onchange={onchange}></c-omnichanneltheme-element-toggle></div>
+            <div class="slds-col slds-size_2-of-7"><c-omnichanneltheme-element-toggle type="notification" keyid={row.value} checked={row.notification} disabled="true" onchange={onchange}></c-omnichanneltheme-element-toggle></div>
+        </div>
+    </template>
+</template>

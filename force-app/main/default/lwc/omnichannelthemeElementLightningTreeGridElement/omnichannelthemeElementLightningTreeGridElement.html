@@ -1,0 +1,31 @@
+<template>
+    <tr class="slds-line-height_reset" key={rowData.Id}>
+        <td class="checkboxRow">
+            <c-omnichanneltheme-element-checkbox selected-state={rowData.selectedState} onchange={onchange}></c-omnichanneltheme-element-checkbox>
+        </td>
+
+        <template for:each={rowElement} for:item="column">
+            <th class={elementLevelCSS} key={column.name}>
+                <span ></span>
+                <template if:true={rowData.children}>
+                    <button class="chevronButton" onclick={collapseOrExpand}>
+                        <span class={arrowStyle}></span>
+                    </button>
+                </template>
+                <template if:false={rowData.children}>
+                    <span class="noButtonSpace"></span>
+                </template>
+                <!--{rowData.Id}-->{column.value}
+            </th>
+        </template>
+    </tr>
+    <div class={childsVisibilityStyle}>
+        <template if:true={rowData.children}>
+            <template for:each={rowData.children} for:item="child">
+                <c-omnichanneltheme-element-lightning-tree-grid-element key={child.Id} row-data={child}
+                    grid-column={gridColumn} level={elementLevel} style="display: contents;">
+                </c-omnichanneltheme-element-lightning-tree-grid-element>
+            </template>
+        </template>
+    </div>
+</template>

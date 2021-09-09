@@ -1,0 +1,9 @@
+li {
+    display: inline;
+    color:#242424; 
+    cursor: pointer;
+  }
+  li.activePageNumber{
+   font-weight: 700;
+   border-bottom: solid 3px #1174E6;
+  }

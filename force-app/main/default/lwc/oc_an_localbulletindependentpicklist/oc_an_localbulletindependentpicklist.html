@@ -1,0 +1,11 @@
+<template>   
+<td>
+<lightning-combobox  name="status" value={acc.OC_AN_Status__c} data-id={acc.Id} options={status}
+dropdown-alignment="auto" onchange={handleStatusChange}></lightning-combobox>
+
+</td>
+<td>
+<lightning-combobox name="sub status" value={acc.OC_AN_Sub_Status__c} data-id={acc.Id} options={substatus}
+dropdown-alignment="auto" onchange={handleSubStatusChange}></lightning-combobox>
+</td>
+</template>
