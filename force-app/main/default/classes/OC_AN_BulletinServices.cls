@@ -22,6 +22,7 @@ public with sharing class OC_AN_BulletinServices {
     List<OC_AN_Bulletin_Account_Product__c> alertsList = [
       SELECT
         OC_AN_Bulletin__r.OC_AN_BulletinApprovedDate__c,
+        OC_AN_Bulletin_Obsolete__c,
         OC_AN_Bulletin__r.OC_AN_ExternalAutomationId__c,
         OC_AN_Bulletin__r.LastModifiedDate,
         OC_AN_Bulletin__r.OC_AN_Delay__c,
@@ -48,7 +49,8 @@ public with sharing class OC_AN_BulletinServices {
         dateChecker[1] == timeStemp &&
         !String.IsBlank(
           alertRecord.OC_AN_Bulletin__r.OC_AN_ExternalAutomationId__c
-        )
+        ) &&
+        !alertRecord.OC_AN_Bulletin_Obsolete__c
       ) {
         HttpResponse response = OC_IB_IntegrationBaseClass.RequestGenerationcallout(
           OC_AN_MC_AutomationActivityUtils.startAutomation(
